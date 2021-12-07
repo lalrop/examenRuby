@@ -15,7 +15,7 @@
         <td><%=building.name%></td>
         <td><%=building.address%></td>
         <td><%=building.city%></td>
-        <td><%= button_to 'Apartamentos', building_apartaments_path(building), method: :get, class:"btn btn-sm bg-warning text-dark"%></td>
+        <td><%= button_to 'Apartamentos', apartamentBuildings_path(building), method: :get, class:"btn btn-sm bg-warning text-dark"%></td>
         
     </tr>
     <%end%>

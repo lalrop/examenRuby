@@ -1,0 +1,7 @@
+<h1 class="my-4">Departamentos en el edificio "<%=@building.name%>"</h1>
+<p>El edificio tiene los siguientes departamentos:</p>
+<ul>
+    <%@apartaments.each do |apartament|%>
+        <li><%=apartament.number%></li>
+    <%end%>
+</ul>

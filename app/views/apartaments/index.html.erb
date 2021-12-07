@@ -11,7 +11,7 @@
     <%@apartaments.each do |apartament|%>
     <tr>
         <td><%=apartament.number%></td>
-        <td><%=button_to 'Ver detalle', apartament_path(apartament), class:"btn btn-danger text-dark"%></td>    
+        <td><%=button_to 'Ver detalle', apartament_path(apartament), class:"btn btn-warning text-dark", method: :get%></td>    
     </tr>
     <%end%>
   </tbody>
@@ -19,4 +19,4 @@
 
 <%=button_to 'Agregar departamento', new_apartament_path, class:"btn btn-success my-3", method: :get%>
 
-<%= button_to 'Volver', buildings_path, class:"btn btn-success" %>
+<%= button_to 'Volver', buildings_path, class:"btn btn-success", method: :get %>

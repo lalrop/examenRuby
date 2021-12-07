@@ -1,0 +1,6 @@
+<h1 class="my-3">Apartamento <%= @apartament.number %></h1>
+<p><strong>Edificio :</strong> "<%= @apartament.building.name %>"</p> 
+<p><strong>Ciudad: </strong><%= @apartament.building.city %></p> 
+<p><strong>Direccion : </strong> <%= @apartament.building.address %></p>
+
+<%= button_to 'volver', apartaments_path, method: :get, class:"btn btn-warning text-dark" %>

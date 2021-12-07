@@ -3,6 +3,11 @@ class ApartamentsController < ApplicationController
         @apartaments = Apartament.all
     end
 
+    def indexBuilding
+        @apartaments = Apartament.where(building_id:params[:building_id])
+        @building = Building.find(params[:building_id])
+    end
+    
     def new
         @apartament = Apartament.new
         @buildings = Building.all
@@ -16,8 +21,12 @@ class ApartamentsController < ApplicationController
         else
             render :new
         end
-        
     end
+
+    def show
+        @apartament = Apartament.find(params[:id])
+    end
+    
     
 
     private
