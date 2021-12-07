@@ -4,6 +4,7 @@
   <thead>
     <tr>
         <th scope="col">Numero</th>
+        <th scope="col">Edificio</th>
         <th scope="col"></th>
     </tr>
   </thead>
@@ -11,6 +12,7 @@
     <%@apartaments.each do |apartament|%>
     <tr>
         <td><%=apartament.number%></td>
+        <td><%=apartament.building.name%></td>
         <td><%=button_to 'Ver detalle', apartament_path(apartament), class:"btn btn-warning text-dark", method: :get%></td>    
     </tr>
     <%end%>
