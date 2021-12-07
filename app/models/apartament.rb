@@ -1,3 +1,3 @@
 class Apartament < ApplicationRecord
-  belongs_to :buildings
+  belongs_to :building
 end

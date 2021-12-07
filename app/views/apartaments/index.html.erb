@@ -1,0 +1,22 @@
+<h1 class="my-3"> Listado de Departamentos</h1>
+
+<table class="table table-striped table-hover table-sm">
+  <thead>
+    <tr>
+        <th scope="col">Numero</th>
+        <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <%@apartaments.each do |apartament|%>
+    <tr>
+        <td><%=apartament.number%></td>
+        <td><%=button_to 'Ver detalle', apartament_path(apartament), class:"btn btn-danger text-dark"%></td>    
+    </tr>
+    <%end%>
+  </tbody>
+</table>
+
+<%=button_to 'Agregar departamento', new_apartament_path, class:"btn btn-success my-3", method: :get%>
+
+<%= button_to 'Volver', buildings_path, class:"btn btn-success" %>

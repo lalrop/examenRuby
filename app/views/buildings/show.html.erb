@@ -1,0 +1,7 @@
+<h1 class="text-center my-3">Edificio "<%=@building.name%>"</h1>
+<p><strong>Ciudad:</strong> <%= @building.city %></p>
+<p><strong>Direccion:</strong> <%= @building.address %></p>
+
+<div class="text-center">
+    <%= button_to 'volver', buildings_path, method: :get, class:"btn btn-success" %>
+</div>

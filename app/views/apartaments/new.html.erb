@@ -1,0 +1,20 @@
+<h1 class="my-3"> Nuevo departamento </h1>
+<%=form_with(model: [@building, @apartament], local: true) do |form|%>
+    <div class="form">
+        <div class="my-3">
+            <%= form.label :number, 'Numero de apartamento', class:"form-label"%>
+            <%= form.number_field :number , class:"form-control"%>
+        </div>
+        <div class="my-3">
+            <%= form.label :building, 'Edificio', class:"form-label"%>
+            <%# <%= form.number_field :building_id , class:"form-control"%>
+            <% cities_array = Building.all.map { |building| [building.name, building.id] } %>
+            <%= form.select :building_id, options_for_select(cities_array) %>
+
+        </div>
+        <div class="text-center">
+            <%=form.submit 'Agregar Departamento', class:'btn btn-warning text-dark'%>
+        </div>
+    </div>    
+<% end %>    
+

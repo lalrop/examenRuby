@@ -14,10 +14,10 @@ ActiveRecord::Schema.define(version: 2021_12_07_131920) do
 
   create_table "apartaments", force: :cascade do |t|
     t.integer "number"
-    t.integer "buildings_id", null: false
+    t.integer "building_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["buildings_id"], name: "index_apartaments_on_buildings_id"
+    t.index ["building_id"], name: "index_apartaments_on_building_id"
   end
 
   create_table "buildings", force: :cascade do |t|
@@ -28,5 +28,5 @@ ActiveRecord::Schema.define(version: 2021_12_07_131920) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  add_foreign_key "apartaments", "buildings", column: "buildings_id"
+  add_foreign_key "apartaments", "buildings"
 end

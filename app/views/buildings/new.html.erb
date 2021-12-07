@@ -1,0 +1,25 @@
+<h1 class="text-center my-4"> Nuevo Edificio</h1>
+
+<%=form_with model:@building do |form|%>
+    <div class="form">
+        <div class="my-3">
+            <%= form.label :name, 'Edificio', class:"form-label"%>
+            <%= form.text_field :name , class:"form-control"%>
+        </div>
+        <div class="my-3">
+            <%= form.label :city, 'Ciudad', class:"form-label"%>
+            <%= form.text_field :city, class:"form-control"%>
+        </div>
+        <div class="my-3">
+            <%= form.label :address, 'Direccion', class:"form-label"%>
+            <%= form.text_field :address, class:"form-control"%>
+        </div>
+        <div class="text-center">
+            <%=button_to 'Agregar nuevo edificio', buildings_path(@building), class:"btn btn-success" %>
+        </div>
+
+    </div>    
+<% end %>
+
+
+    
